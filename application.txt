@@ -18,19 +18,7 @@ public class Main {
       System.out.println(num + " is not a prime number.");
   }
 }
-Run Code
-Output
 
-29 is a prime number.
-In the above program, for loop is used to determine if the given number num is prime or not.
-
-Here, note that we are looping from 2 to num/2. It is because a number is not divisible by more than its half.
-
-Inside the for loop, we check if the number is divisible by any number in the given range (2...num/2).
-
-If num is divisible, flag is set to true and we break out of the loop. This determines num is not a prime number.
-If num isn't divisible by any number, flag is false and num is a prime number.
-Example 2: Program to Check Prime Number using a while loop
 public class Main {
 
   public static void main(String[] args) {
