@@ -1,0 +1,18 @@
+pipeline{
+    agent any 
+    stages{
+        stage('build')
+        {
+            bat "mvn clean"
+        }
+        stage('test')
+        {
+            bat "mvn test"
+        }
+        stage('deploy')
+        {
+            bat "mvn compile"
+        }
+        stage('release')
+    }
+}
