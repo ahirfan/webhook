@@ -3,16 +3,31 @@ pipeline{
     stages{
         stage('build')
         {
-            bat "mvn clean"
+            steps{
+                echo "build job done"
+                bat "mvn clean"
+            }
         }
         stage('test')
         {
-            bat "mvn test"
+            steps{
+                echo "test job done"
+                bat "mvn test"
+            }
         }
         stage('deploy')
         {
-            bat "mvn compile"
+            steps{
+                echo "deploy job done"
+                bat "mvn compile"
+            }
         }
         stage('release')
+        {
+            steps{
+                echo "release job done"
+                bat "mvn package"
+            }
+        }
     }
 }
